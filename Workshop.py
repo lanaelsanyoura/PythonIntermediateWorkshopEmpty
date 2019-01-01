@@ -27,15 +27,8 @@ class Workshop():
 
     def __init__(self, date, start_time, end_time, zoom_link, title, description, host,
                  capacity=50):
-        self.date = date
-        self.start_time = start_time
-        self.end_time = end_time
-        self.zoom_link = zoom_link
-        self.title = title
-        self.description = description
-        self.host = host
-        self.capacity = capacity
-        self.attendees = []
+        # implement assignments
+        pass
 
     def conflicts(self, other):
         """
@@ -45,9 +38,7 @@ class Workshop():
         :param other: the workshop we are testing for conflicts against
         :return: True if these two workshops conflict in time
         """
-        return (self.date == other.date) and (
-                    other.start_time.time() <= self.start_time.time() <= other.end_time.time() or \
-                    other.start_time.time() <= self.end_time.time() <= other.end_time.time())
+        pass
 
     def add_attendees(self, attendee):
         """
@@ -57,11 +48,7 @@ class Workshop():
         @param attendee:
         @return: True if we signed them up, False otherwise
         """
-        if len(self.attendees) < self.capacity and attendee.sign_up(self):
-            self.attendees.append(attendee)
-            return True
-        print("Sorry we have reached max capacity, or you have conflicting workshops")
-        return False
+        pass
 
     def __str__(self):
         """
@@ -85,18 +72,19 @@ class Workshop():
         Return a list of all our attendees in a string manner
         @return:
         """
-        return [str(a) for a in self.attendees]
+        pass
 
 
 if __name__ == '__main__':
     # example build
-    title = "Intermediate Python"
-
-    desc = "Spruce up your python skills!"
-    host = Person("Lana",
-                  "El Sanyoura",
-                  date(1997, 4, 20), "50 st george str")
-    ws = Workshop(date(2020, 10, 31), datetime(2020, 10, 31, 12, 30),
-                  datetime(2020, 10, 31, 15, 30), "zoom.com/333", title, desc, host)
-    attendee1 = Attendee("Joane", "Do", date(1997, 4, 20), "50 st george str", "jd@gmail.com")
-    ws.add_attendees(attendee1)
+    # title = "Intermediate Python"
+    #
+    # desc = "Spruce up your python skills!"
+    # host = Person("Lana",
+    #               "El Sanyoura",
+    #               date(1997, 4, 20), "50 st george str")
+    # ws = Workshop(date(2020, 10, 31), datetime(2020, 10, 31, 12, 30),
+    #               datetime(2020, 10, 31, 15, 30), "zoom.com/333", title, desc, host)
+    # attendee1 = Attendee("Joane", "Do", date(1997, 4, 20), "50 st george str", "jd@gmail.com")
+    # ws.add_attendees(attendee1)
+    pass

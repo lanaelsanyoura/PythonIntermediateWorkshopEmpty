@@ -17,10 +17,10 @@ class Attendee(Person):
     """
 
     def __init__(self, firstname, lastname, birthdate, address, email):
-        super().__init__(firstname, lastname, birthdate, address)
-        self.email = email
-        self.workshops = []
-
+        # super().__init__(...)
+        # self.email = ...
+        # self.workshops = ...
+        pass # todo remove this pass
     def sign_up(self, workshop):
         """
         Add a workshop to our list if there's no conflict with the one's we've
@@ -29,11 +29,8 @@ class Attendee(Person):
         @param workshop: Workshop we are attending
         @return: True if there is no conflict, False otherwise
         """
-        for w in self.workshops:
-            if w.conflicts(workshop):
-                return False
-        self.workshops.append(workshop)
-        return True
+        # if this workshop conflicts with existing ones, return False
+        # else add the workshop and return True
 
     def cancel(self, workshop):
         """
@@ -41,16 +38,15 @@ class Attendee(Person):
         @param workshop: Workshop instance
         @return: Nothing
         """
-        self.workshops.remove(workshop)
-        workshop.attendees.remove(self)
+
 
     def __str__(self):
         """
-        Return the string of the name of this attendee and all the workshops
+        Return the string of the name of this attendee and all the workshops, using super()
         they are attending
         @return: string
         """
-        return super(Attendee, self).__str__() + " " + self.email
+
 
     def getInfo(self):
         """
@@ -62,4 +58,5 @@ class Attendee(Person):
 
 if __name__ == '__main__':
     # Example Build
-    attendee = Attendee("Lana", "Sanyoura", date(1997, 10, 23), "223", "lsa@gmail.com")
+    # attendee = Attendee("Lana", "Sanyoura", date(1997, 10, 23), "223", "lsa@gmail.com")
+    pass

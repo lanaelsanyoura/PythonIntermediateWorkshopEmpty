@@ -17,10 +17,11 @@ class Person:
         Initialize our class instance
         @return:
         """
-        self.firstname = firstname
-        self.lastname = lastname
-        self.birthdate = birthdate
-        self.address = address
+        # self.firstname = ...
+        # self.lastname = ...
+        # self.birthdate = ...
+        # self.address = ...
+        pass
 
     def __str__(self):
         """
@@ -28,18 +29,15 @@ class Person:
         first and last name
         @return: string
         """
-        return str.format("{} {}", self.firstname, self.lastname)
+        pass
 
     def age(self):
         """
         Given the current date, return the age of this person
+        HINT: date.today() returns the date from today
         :return: int age
         """
-        today = date.today()
-        age = today - self.birthdate
-        if today < date(today.year, self.birthdate.month, self.birthdate.day):
-            age -= 1
-        return age
+        pass
 
     def getInfo(self):
         """
@@ -51,5 +49,6 @@ class Person:
 
 if __name__ == '__main__':
     # Example Build
-    person = Person("Joane", "Do", date(1997, 4, 20), "50 st george str")
-    print(person)
+    # person = Person("Joane", "Do", date(1997, 4, 20), "50 st george str")
+    # print(person)
+    pass

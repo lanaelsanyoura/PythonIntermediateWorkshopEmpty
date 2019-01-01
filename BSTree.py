@@ -18,7 +18,7 @@ class TreeNode:
         Return True if this node has no children (both children are None)
         @return:True if this node has no children and False otherwise
         """
-        return self.left is None and self.right is None
+        pass
 
 
 class BSTree():
@@ -58,14 +58,9 @@ class BSTree():
         @return: the modified currNode after adding nodeToAdd
         """
         # Recursively build this tree
-        self.size += 1
-        if currNode is None:
-            return nodeToAdd
-        if nodeToAdd.value <= currNode.value:
-            currNode.left = self.add_helper(currNode.left, nodeToAdd)
-        elif nodeToAdd.value >= currNode.value:
-            currNode.right = self.add_helper(currNode.right, nodeToAdd)
-        return currNode
+        # If currNode is None, return nodeToAdd
+        # If noteToAdd's value is less than currNode, add it to the left child
+        # If noteToAdd's value is more than currNode, add it to the right child
 
     def __str__(self):
         """
@@ -81,9 +76,7 @@ class BSTree():
         :param currNode: The node we are currently on
         :return: The string representing this node
         """
-        if currNode is not None:
-            return "{} {} {}".format(self.str_helper(currNode.left), currNode.value, self.str_helper(currNode.right))
-        return ""
+        pass
 
     def __contains__(self, value):
         """
@@ -101,14 +94,7 @@ class BSTree():
         @return: True if value in currNode, else False
         """
         # Check to see if this BST contains the given value
-        if currNode is None:
-            return False
-        if value == currNode.value:
-            return True
-        if value < currNode.value:
-            return self.contains_helper(value, currNode.left)
-        if value > currNode.value:
-            return self.contains_helper(value, currNode.right)
+        pass
 
     def get_max_value(self):
         """
@@ -123,10 +109,6 @@ class BSTree():
         @param currNode: TreeNode
         @return: int
         """
-        if currNode.isLeaf():
-            return currNode.value
-        if currNode.right is None:
-            return max(currNode.value, self.get_max_helper(currNode.left))
-        return self.get_max_helper(currNode.right)
+        pass
 
 

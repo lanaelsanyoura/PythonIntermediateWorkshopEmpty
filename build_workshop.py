@@ -8,7 +8,7 @@ from Attendee import Attendee
 from Workshop import Workshop
 
 # Create workshop
- # host = Person(...)
+# host = Person(...)
 
 host = Person("Joane",
               "Do",
@@ -25,10 +25,7 @@ with open('attendees.csv') as csvfile:
         # row['firstname], row['lastname'] ...
         # birthDate = ...
         # attendee = ...
-        birthlist = row['birthdate'].split('-')
-        birthdate = date(int(birthlist[0]), int(birthlist[1]), int(birthlist[2]))
-        attendee = Attendee(row['firstname'], row['lastname'], birthdate, row['address'], row['email'])
-        ws.add_attendees(attendee)
+        pass
     print(ws.get_str_attendees())
 
 if __name__ == '__main__':

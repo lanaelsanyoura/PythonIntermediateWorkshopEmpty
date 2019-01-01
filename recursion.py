@@ -2,15 +2,14 @@
 Mini examples of recursive functions
 """
 
+
 def factorial(n):
     """
     Return n! where n! = n* (n-1) * (n-2) * (n-3)...*1
     @param n:
     @return: n!
     """
-    if n == 0:
-        return 1
-    return n * factorial(n - 1)
+    pass
 
 
 def factorial_iterative(n):
@@ -19,10 +18,7 @@ def factorial_iterative(n):
     :param n: the value we are computing the factorial of
     :return: n!
     """
-    factorial = 1
-    for i in range(1, n + 1):
-        factorial = factorial * i
-    return factorial
+    pass
 
 
 def fibonacci(n):
@@ -33,9 +29,7 @@ def fibonacci(n):
     @param n:
     @return:fibonancci(n)
     """
-    if n == 0 or n == 1:
-        return 1
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    pass
 
 
 def pizzaParty(n):
@@ -46,12 +40,7 @@ def pizzaParty(n):
     Assume the first person will always eat 1 slice and the second person will always eat 2
     :return:
     """
-    if n == 0:
-        return 1
-    if n == 1:
-        return 2
-    return 2 * pizzaParty(n - 1) + pizzaParty(n - 2)
-
+    pass
 
 
 def sum_list(lists):
@@ -66,9 +55,7 @@ def sum_list(lists):
     @param lists:
     @return: sum of the elements in this list
     """
-    if isinstance(lists, int):
-        return lists
-    return sum([sum_list(l) for l in lists])
+    pass
 
 
 def max_list(lists):
@@ -83,10 +70,7 @@ def max_list(lists):
     @param lists:
     @return:
     """
-    if isinstance(lists, int):
-        return lists
-    return max([max_list(l) for l in lists])
-
+    pass
 
 
 def recursive(variable):

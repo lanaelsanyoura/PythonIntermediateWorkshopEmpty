@@ -2,6 +2,7 @@
 Mini examples of recursive functions
 """
 
+
 def factorial(n):
     """
     Return n! where n! = n* (n-1) * (n-2) * (n-3)...*1
@@ -53,7 +54,6 @@ def pizzaParty(n):
     return 2 * pizzaParty(n - 1) + pizzaParty(n - 2)
 
 
-
 def sum_list(lists):
     """
     Given an arbitrarily levelled list, return the sum of all its elements
@@ -86,7 +86,6 @@ def max_list(lists):
     if isinstance(lists, int):
         return lists
     return max([max_list(l) for l in lists])
-
 
 
 def recursive(variable):

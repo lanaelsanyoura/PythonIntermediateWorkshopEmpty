@@ -100,3 +100,4 @@ if __name__ == '__main__':
                   datetime(2020, 10, 31, 15, 30), "zoom.com/333", title, desc, host)
     attendee1 = Attendee("Joane", "Do", date(1997, 4, 20), "50 st george str", "jd@gmail.com")
     ws.add_attendees(attendee1)
+    print(ws)
